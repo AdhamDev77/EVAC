@@ -1,0 +1,258 @@
+nav{
+  position: relative;
+    width: 100%;
+    height: 75px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav_container{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_first, .nav_last{
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav_last a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 12px;
+  border-radius: 50%;
+  background-color: #deffc9;
+}
+.nav_last a i{
+  font-size: 20px;
+  color: var(--main);
+}
+
+.nav_first{
+  width: 60%;
+}
+
+.nav_first img{
+  width: 100px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+nav .main_ul{
+    gap: 5rem !important;
+}
+
+nav ul li{
+    transition: .2s ease;
+}
+
+nav ul li:hover{
+    scale: 1.05;
+}
+
+.nav-settings-section{
+    position: absolute;
+    top: 22px;
+    left: -95px;
+    width: max-content;
+}
+
+.settings-btn{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links{
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--main);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+nav .links:hover{
+  scale: 1.05;
+}
+
+#menuToggle
+{
+  display: none;
+  position: relative;
+  top: 5px;
+  left: -15px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  transition: color 0.2s ease;
+}
+
+#menuToggle a:hover
+{
+  color: rgb(232, 232, 232);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #000;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 25px 0 25px 0;
+  margin: 19px 0 0 600px;
+  background: var(--main);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: translate(-260%, 0);
+}
+
+
+@media (max-width: 920px){
+  .nav_first{
+    width: max-content;
+  }
+    nav ul:nth-child(2){
+        display: none;
+    }
+    nav ul:nth-child(3){
+        display: none;
+    }
+    #menuToggle{
+        display: block;
+    }
+}
+@media (max-width: 500px){
+  nav button{
+    font-size: 10px;
+  }
+}

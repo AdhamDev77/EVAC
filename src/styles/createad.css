@@ -1,0 +1,162 @@
+.create_body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+
+.create_body form{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    min-height: 100vh;
+}
+
+.photo_section, .info_section, .user_info_section{
+margin-top: 20px;
+width: 100%;
+height: max-content;
+border: 1px solid #ccc;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+background-color: #fff;
+padding: 20px;
+}
+
+form h3{
+font-weight: 400;
+font-size: 24px;
+}
+
+.photo_list{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 5px 0 5px 0;
+}
+.photo_list h3{
+    font-weight: 200;
+    color: #999;
+    text-align: center;
+}
+.photo_list li{
+    position: relative;
+    width: 150px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+
+.photo_list li button{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -12px;
+    left: -12px;
+    background-color: rgb(240, 66, 66);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.preview{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.photo_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border: 1px dashed #888;
+    color: #888;
+    cursor: pointer;
+}
+
+.photo_input i{
+    font-size: 56px;
+}
+.photo_input span{
+    font-size: 20px;
+}
+
+.sign_element{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 70px;
+    margin: 10px 0 10px 0;
+}
+
+.sign_element label{
+    margin-bottom: 10px;
+}
+
+form .quill ,form input, form select{    
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: end;
+}
+form select{
+    width: 40%;
+    text-align: center;
+}
+form input{    
+    border: 1px solid #999;
+}
+form .quill{
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.ql-editor{
+    
+}
+
+.submit_btn{
+    width: 100%;
+    background-color: var(--main);
+    border: none;
+    color: #fff;
+    margin: 15px 0 15px 0;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit_btn:hover{
+    background: rgb(39, 128, 58);
+}
+
+.row_container{
+    display: flex;
+    width: 80%;
+}
+
+.row{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.row input, .row select{
+    width: 100%;
+}

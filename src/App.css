@@ -1,0 +1,49 @@
+:root {
+    --main: #0D9276;
+    --main2: #096d58;;
+    --bg: #f6f6f6;
+    --bg2: #BBE2EC;
+}
+
+body, html{
+    background-color: var(--bg);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'cairo', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+hr {
+    margin: 20px 0 20px 0;
+    width: 100%;               
+    background-color:#999;
+    height: 1px;
+  }
+
+.App{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 1150px) {
+    nav{
+        display: none !important;
+    }
+    .home_body{
+        display: none !important;
+    }
+    footer{
+        display: none;
+    }
+    .mobile_body{
+        display: flex !important;
+    }
+}
