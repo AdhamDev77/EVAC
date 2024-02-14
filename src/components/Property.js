@@ -120,7 +120,7 @@ function Property() {
     e.preventDefault();
     e.stopPropagation();
     try {
-      await axios.post(`http://localhost:4000/api/favourite/add/${prop_id}`, { user_id: user_id });
+      await axios.post(`https://evac-backend.onrender.com/api/favourite/add/${prop_id}`, { user_id: user_id });
       setFavProperty(prevState => [...prevState, { _id: prop_id }]);
     } catch (error) {
       console.error('Error adding favorite:', error);
@@ -131,7 +131,7 @@ function Property() {
     e.preventDefault();
     e.stopPropagation();
     try {
-      await axios.post(`http://localhost:4000/api/favourite/remove/${prop_id}`, { user_id: user_id });
+      await axios.post(`https://evac-backend.onrender.com/api/favourite/remove/${prop_id}`, { user_id: user_id });
       setFavProperty(prevState => prevState.filter(prop => prop._id !== prop_id));
     } catch (error) {
       console.error('Error removing favorite:', error);
@@ -216,7 +216,7 @@ function Property() {
                   <></>
                   )}
                   <div className='prop_img'>
-                  <img key={prop.main_image} src={`http://localhost:4000/${prop.main_image}`} alt="Property" />
+                  <img key={prop.main_image} src={`https://evac-backend.onrender.com/${prop.main_image}`} alt="Property" />
                   </div>
                   <div className='prop_info'>
                     <h1 className='price_info'>₺ {prop.price}</h1>

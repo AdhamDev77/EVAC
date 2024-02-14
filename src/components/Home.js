@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const propertyResponse = await axios.get(`http://localhost:4000/api/property`);
+        const propertyResponse = await axios.get(`https://evac-backend.onrender.com/api/property`);
         setProperty(propertyResponse.data.slice(0,4));
       } catch (error) {
         console.error('Error fetching property:', error);
@@ -53,7 +53,7 @@ function Home() {
         
             <a href={`/property/${prop._id}`} className='prop'>
               <div className='prop_img'>
-              <img key={prop.main_image} src={`http://localhost:4000/${prop.main_image}`} alt="Property" />
+              <img key={prop.main_image} src={`https://evac-backend.onrender.com/${prop.main_image}`} alt="Property" />
               </div>
               <div className='prop_info'>
                 <h1 className='title_info'>{prop.title}</h1>
@@ -105,7 +105,6 @@ function Home() {
                     <div className='newest_container'>
                       <PropertyList />
                     </div>
-                    <a className='show_more' href="/property">Show more ...</a>
                   </div>
                   <div className='locations_body'>
                     <h1 className='home_title'>Featured Locations</h1>

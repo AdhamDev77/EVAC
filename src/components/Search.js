@@ -55,7 +55,7 @@ function Search() {
         formData.append('rooms', searchParams.rooms);
         formData.append('type', searchParams.type);
         try {
-            const response = await axios.post('http://localhost:4000/api/property/search', formData, {
+            const response = await axios.post('https://evac-backend.onrender.com/api/property/search', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

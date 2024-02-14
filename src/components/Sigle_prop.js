@@ -18,9 +18,9 @@ function Sigle_prop() {
         setLoading(true)
         const fetchData = async (categoryID) => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/property/${id}`)
+                const response = await axios.get(`https://evac-backend.onrender.com/api/property/${id}`)
                 setProperty(response.data)
-                setNewImagesArray(response.data.imagesArray.map(item => 'http://localhost:4000/' + item))
+                setNewImagesArray(response.data.imagesArray.map(item => 'https://evac-backend.onrender.com/' + item))
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }

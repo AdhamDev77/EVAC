@@ -19,7 +19,7 @@ function Profile_edit() {
     setLoading(true);
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/users/${user_id}`);
+        const response = await axios.get(`https://evac-backend.onrender.com/api/users/${user_id}`);
         setUser(response.data);
         setFormData({
           username: response.data.username,
@@ -47,7 +47,7 @@ function Profile_edit() {
     event.preventDefault();
     try {
       // Make API call to update user details
-      await axios.patch(`http://localhost:4000/api/users/${user_id}`, formData);
+      await axios.patch(`https://evac-backend.onrender.com/api/users/${user_id}`, formData);
       toast.success("Your Details Updated Successfully")
       localStorage.setItem("username", formData.username)
       localStorage.setItem("phone", formData.phone)
@@ -60,7 +60,7 @@ function Profile_edit() {
     event.preventDefault();
     try {
       // Make API call to update user details
-      await axios.delete(`http://localhost:4000/api/users/${user_id}`);
+      await axios.delete(`https://evac-backend.onrender.com/api/users/${user_id}`);
       localStorage.clear()
       navigate("/")
     } catch (error) {

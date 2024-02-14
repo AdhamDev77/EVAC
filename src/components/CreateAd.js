@@ -60,7 +60,7 @@ function CreateAd() {
             formData.append('uploader_number', phoneNumber);
             formData.append('description', value);
             console.log(formData)
-            const response = await axios.post('http://localhost:4000/api/property/create', formData, {
+            const response = await axios.post('https://evac-backend.onrender.com/api/property/create', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

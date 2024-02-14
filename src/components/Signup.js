@@ -27,14 +27,14 @@ function Signup() {
     const handlePost = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/api/users/signup', user, {
+            const response = await axios.post('https://evac-backend.onrender.com/api/users/signup', user, {
             });
             localStorage.setItem("accessToken", response.data.token)
             localStorage.setItem("_id", response.data.user._id)
             localStorage.setItem("username", response.data.user.username)
             localStorage.setItem("email", response.data.user.email)
             localStorage.setItem("phone", response.data.user.phone)
-            navigate('/property');
+            navigate('/');
             //localStorage.setItem("mytime", Date.now());
         } catch (error) {
             toast.error(error.response.data.error);
