@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fba029ca.css",
+    "main.js": "/static/js/main.1bf32056.js",
+    "static/js/787.d5fa4d18.chunk.js": "/static/js/787.d5fa4d18.chunk.js",
+    "static/media/phone.png": "/static/media/phone.6018739c0ba13d0c989f.png",
+    "static/media/Gazi.png": "/static/media/Gazi.82ee67d05cbe02b28da8.png",
+    "static/media/homepage.jpg": "/static/media/homepage.b678ecb3525533ed7575.jpg",
+    "static/media/Istanbul.jpg": "/static/media/Istanbul.6f972f0f8359a086e019.jpg",
+    "static/media/Antakya.jpg": "/static/media/Antakya.88ff83fdefda73cd949a.jpg",
+    "static/media/logo_full_white.png": "/static/media/logo_full_white.3730e89ea126eccbbcb6.png",
+    "static/media/logo_full.png": "/static/media/logo_full.da382a8d8200da5a07cf.png",
+    "static/media/Cyprus.jpg": "/static/media/Cyprus.9cad27f788253ba69e90.jpg",
+    "static/media/home_sell.svg": "/static/media/home_sell.2440db9dc2ade5e8199bb91183ac4ff5.svg",
+    "static/media/home_filter.svg": "/static/media/home_filter.3470507dd3f3de4d678b017b9c4b3872.svg",
+    "static/media/home_buy.svg": "/static/media/home_buy.f124339e36aa3accf6431fec7695c46f.svg",
+    "index.html": "/index.html",
+    "main.fba029ca.css.map": "/static/css/main.fba029ca.css.map",
+    "main.1bf32056.js.map": "/static/js/main.1bf32056.js.map",
+    "787.d5fa4d18.chunk.js.map": "/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fba029ca.css",
+    "static/js/main.1bf32056.js"
+  ]
+}
